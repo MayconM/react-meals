@@ -12,7 +12,7 @@ const Menu = props =>
                 {props.itemList.map((item, index)=>
                 {
                     return (
-                        <li>{props.children({item: item})}</li>
+                        <li><MenuItem item={item}/></li>
                     )
                 })}
             </ul>

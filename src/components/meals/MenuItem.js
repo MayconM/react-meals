@@ -14,7 +14,7 @@ const MenuItem = props =>
             </div>
             <div className='rightBox'>
                 <h3>{props.item.amount} x $ {props.item.price}</h3>
-                <button className='addButton' onClick={cartContext.onAdd.bind(props.item)}>+</button>
+                <button className='addButton' onClick={cartContext.add.bind({...props.item,amount: 1})}>+</button>
             </div>
             <hr />
         </div>
