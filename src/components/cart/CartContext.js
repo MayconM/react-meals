@@ -1,7 +1,6 @@
-import React from 'react';
-// testing with context inside the CartProvider, if works this will be removed
+import {createContext} from 'react';
 
-const CartContext = React.createContext
+const CartContext = createContext
 ({
     itemList: [],
     totalPrice: 0,

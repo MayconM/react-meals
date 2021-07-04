@@ -1,6 +1,6 @@
-import {createContext} from 'react';
+import {useContext} from 'react';
 import {useReducer} from 'react';
-//import CartContext from './CartContext';
+import CartContext from './CartContext';
 
 // default state for empty cart
 const defaultCartState =
@@ -8,14 +8,6 @@ const defaultCartState =
     itemList: [],
     totalPrice: 0,
 };
-
-// create context for cart
-const CartContext = createContext(
-    {
-        ...defaultCartState,
-        add: item => {},
-        remove: item => {}
-    });
 
 const cartReducer = (state, action) =>
 {
